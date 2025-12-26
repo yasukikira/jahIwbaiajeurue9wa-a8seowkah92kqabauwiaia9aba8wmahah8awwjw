@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mom's Potion: Dungeon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-wrapper">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="dialogue-box" class="hidden">
+            <p id="dialogue-text">...</p>
+            <input type="text" id="name-input" class="hidden" placeholder="Enter Name">
+            <button id="next-btn">Next ▼</button>
+        </div>
+
+        <div id="decision-box" class="hidden">
+            <h2>ROOM CLEARED!</h2>
+            <p>Go deeper or return with loot?</p>
+            <button class="btn-risk" onclick="nextLevel()">DESCEND (Next Floor)</button>
+            <button class="btn-safe" onclick="cashOut()">LEAVE (Get Code)</button>
+        </div>
+
+        <div id="controls">
+            <div id="dpad">
+                <div class="d-btn" id="up">▲</div>
+                <div class="d-btn" id="left">◀</div>
+                <div class="d-btn" id="down">▼</div>
+                <div class="d-btn" id="right">▶</div>
+            </div>
+            <div id="action-btn">⚔</div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
